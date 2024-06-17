@@ -1,0 +1,31 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.bar-graph {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    width: 80%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.bar {
+    width: 15%;
+    background-color: #4caf50;
+    text-align: center;
+    color: white;
+    padding: 10px 0;
+    box-sizing: border-box;
+    transition: height 0.3s ease-in-out;
+}
+
+.bar:hover {
+    background-color: #45a049;
+}

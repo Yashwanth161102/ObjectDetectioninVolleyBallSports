@@ -1,0 +1,12 @@
+names:
+- player
+nc: 1
+roboflow:
+  license: CC BY 4.0
+  project: players_temp
+  url: https://universe.roboflow.com/shukur-sabzaliev-42xvj/players_temp/dataset/2
+  version: 2
+  workspace: shukur-sabzaliev-42xvj
+test: /Users/yashwanthponugoti/Documents/Players-Dataset-2/test/images
+train: /Users/yashwanthponugoti/Documents/Players-Dataset-2/train/images
+val: /Users/yashwanthponugoti/Documents/Players-Dataset-2/valid/images

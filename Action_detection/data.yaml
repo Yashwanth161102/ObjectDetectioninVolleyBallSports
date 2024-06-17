@@ -1,0 +1,16 @@
+names:
+- block
+- defense
+- serve
+- set
+- spike
+nc: 5
+roboflow:
+  license: CC BY 4.0
+  project: volleyball-actions
+  url: https://universe.roboflow.com/volleyball-players/volleyball-actions/dataset/5
+  version: 5
+  workspace: volleyball-players
+test: /Users/yashwanthponugoti/Documents/Data_volley/test/images
+train: /Users/yashwanthponugoti/Documents/Data_volley/train/images
+val: /Users/yashwanthponugoti/Documents/Data_volley/valid/images

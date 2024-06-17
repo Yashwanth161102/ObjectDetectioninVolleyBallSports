@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volleyball ML Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("static/images/backgd1.jpg"); /* Add your background image here */
+            background-size: cover;
+            background-position: top;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: calc(100vh - 60px); /* Adjusting for header height */
+        }
+        .section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.5);
+            margin: 10px;
+            padding: 20px;
+            width: 300px; /* Fixed width */
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+        .section img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .section h2 {
+            margin: 10px 0;
+        }
+        .section p {
+            text-align: center;
+        }
+        .button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ff9800;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: medium;
+        }
+        .button:hover {
+            background-color: #e68a00;
+        }
+        .header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(42, 92, 53, 0.5);
+}
+
+nav {
+    margin-top: 10px;
+}
+
+.nav-button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #ff9800;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    background-color: #e68a00;
+}
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Volleyball Player and Action Detection Using YOLO</h1>
+        <a href="static/infoo.html" class="button">Know More</a>
+    </div>
+    <div class="container">
+        <div class="section">
+            <img src="static/images/actions.jpg" alt="Action Detection in Volleyball"> <!-- Add your image -->
+            <h2>Action Detection in Volleyball</h2>
+            <p>Detect and analyze various actions performed by players in a volleyball game.</p>
+            <form id="uploadForm" action="/volley" method="GET" enctype="multipart/form-data">
+                <button type="submit" class="button">Click Here</button>
+            </form>
+        </div>
+        <div class="section">
+            <img src="static/images/Player.jpg" width="40px" height="190px" alt="Player Detection in Volleyball"> <!-- Add your image -->
+            <h2>Player Detection in Volleyball</h2>
+            <p>Identify and track players on the volleyball court in real-time.</p>
+            <form id="uploadForm2" action="/volley1" method="GET" enctype="multipart/form-data">
+                <button type="submit" class="button">Click Here</button>
+            </form>
+        </div>
+        <div class="section">
+            <img src="static/images/balltracking.jpg" alt="Ball Detection in Volleyball"> <!-- Add your image -->
+            <h2>Ball Detection in Volleyball</h2>
+            <p>Detect and follow the ball during a volleyball match.</p>
+            <form id="uploadForm3" action="/volley2" method="GET" enctype="multipart/form-data">
+                <button type="submit" class="button">Click Here</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

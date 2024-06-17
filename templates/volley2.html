@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOLOv8 - Action and Player Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            
+        }
+        .header {
+            background-color: #f4b0e4;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header img {
+            max-height: 70px; /* Adjust as needed */
+            margin-right: 30px;
+        }
+        .container {
+            display: flex;
+            height: calc(100vh - 60px);
+        }
+        .upload-section, .result-section {
+            flex: 1;
+            padding: 20px;
+        }
+        .upload-section {
+            border-right: 1px solid #ddd;
+        }
+        .upload-section h2, .result-section h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .upload-section form {
+            display: flex;
+            flex-direction: column;
+        }
+        .upload-section input[type="file"] {
+            margin-bottom: 10px;
+        }
+        .result-section img video {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #000;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+        .upload-button {
+            padding: 5px 100px; /* Adjust padding to reduce size */
+            font-size: 14px;   /* Adjust font size as needed */
+            /* Optionally, you can add more styling */
+            background-color: #af1c3e;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: large;
+        }
+        .upload-button:hover {
+            background-color: #e84717; /* Darker shade on hover */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="static/images/headerimg.jpg" alt="Logo or Header Image">
+        <div class="nav">
+            <div class="nav-left">
+                <form id="uploadForm1" action="/" method="GET" enctype="multipart/form-data">
+                    <button style="font-size: large" type="submit" class="button">Home</button>
+                </form>
+            </div>
+            
+            
+            
+            
+        </div>
+        <h1>YOLOv8 - Action and Player Detection</h1>
+    </div>
+    <div class="container">
+        <div class="upload-section">
+            <h1> YOLOv8 Volleyball Tracking</h1><br>
+            <form id="uploadForm" action="/upload2" method="post" enctype="multipart/form-data">
+                <label style="font-size: large" for="fileUpload"> Upload any video</label>
+                <br>
+                <input style="font-size: large" type="file" id="fileUpload" name="video"><br>
+                <button type="submit" class="upload-button">Upload</button>
+            </form>
+            <p>Built using Pytorch & Flask</p>
+        </div>
+        {% if flag  %}
+        <div class="result-section">
+            <h2>Detection Results</h2>
+            <video width="640" height="360" controls>
+                <source src="{{ url_for('video', filename='original.mp4') }}"  type="video/mp4">
+            </video>
+            <!-- <img src="static/images/original.jpg" alt="image" width="640" height="360"> -->
+        </div>
+        {% else %}
+        <div class="result-section">
+            <h2>Detection Results</h2>
+            <img src="" alt="Detection Result">
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
